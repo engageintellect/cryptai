@@ -1,12 +1,10 @@
-# spatz
+# cryptai
 
 ## Description
 
 A complete, fullstack template for Svelte.
 
-![Image Description](/src/lib/assets/images/spatz.png)
-
-[Demo App](https://spatz.engage-dev.com)
+[Demo App](https://cryptai.engage-dev.com)
 
 ## Features
 
@@ -24,8 +22,8 @@ A complete, fullstack template for Svelte.
 1. Create a directory for your Pocketbase instance and navigate to it.
 
 ```bash
-mkdir pb-spatz
-cd pb-spatz
+mkdir cryptai
+cd cryptai
 ```
 
 2. Download the latest release of Pocketbase, unzip it, and start the server.
@@ -45,8 +43,8 @@ unzip pocketbase_0.22.9_linux_amd64.zip
 1. Clone the repo and navigate to the project directory.
 
 ```bash
-git clone https://github.com/engageintellect/spatz
-cd spatz
+git clone https://github.com/engageintellect/cryptai
+cd cryptai
 ```
 
 2. Set your Pocketbase URL and OpenAI API key in a `.env.local` file.
