@@ -36,11 +36,11 @@
 
 <Toaster />
 
-<div class="h-full min-h-screen">
-  <div class="bg-base-100 text-neutral-content">
+<div class="h-full min-h-screen bg-base-300">
+  <div class="text-neutral-content">
     <div class="navbar max-w-2xl mx-auto text-base-content">
       <div class="flex-1">
-        <a href="/" class="btn btn-primary text-xl">spatz</a>
+        <a href="/" class="btn btn-primary text-xl">cryptai</a>
       </div>
       <div class="flex-none gap-2">
         {#if $currentUser}
@@ -211,12 +211,14 @@
     </div>
   </div>
 
-  <div class="max-w-2xl mx-auto p-2 w-full">
-    <slot />
+  <div class="bg-base-300">
+    <div class="max-w-2xl mx-auto p-2 w-full bg-base-300">
+      <slot />
+    </div>
   </div>
 
   <footer
-    class="footer footer-center rounded bg-base-100 p-5 text-base-content"
+    class="footer footer-center rounded bg-base-300 p-5 text-base-content"
   >
     <nav class="flex justify-center">
       <div class="flex gap-1">

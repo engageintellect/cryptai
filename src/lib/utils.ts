@@ -26,3 +26,28 @@ export const validateData = async (formData:any, schema:any) => {
 		};
 	}
 };
+
+export function floatToPrice(amount: number): string {
+  return `$${amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
+}
+
+
+export function largeFloatToText(num: number): string {
+  if (num >= 1e12) {
+    return `${(num / 1e12).toFixed(2)} trillion`;
+  } else if (num >= 1e9) {
+    return `${(num / 1e9).toFixed(2)} billion`;
+  } else if (num >= 1e6) {
+    return `${(num / 1e6).toFixed(2)} million`;
+  } else if (num >= 1e3) {
+    return `${(num / 1e3).toFixed(2)} thousand`;
+  }
+  return num.toString();
+}
+
+
+export function floatToPercentage(num: number): string {
+  const percentage = num.toFixed(2);
+  const sign = num > 0 ? '+' : '';
+  return `${sign}${percentage}%`;
+}
