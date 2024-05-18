@@ -137,15 +137,12 @@
 
           <a
             href="https://github.com/engageintellect/cryptai"
-            class="btn my-2 flex-1 group/githubButton"
+            class="btn btn-primary btn-outline my-2 flex-1 group/githubButton"
           >
             <div class="flex items-center gap-2">
               star on github
 
-              <Icon
-                icon="mdi-star"
-                class="w-7 h-7 md:group-hover/githubButton:text-primary transition-color duration-500"
-              />
+              <Icon icon="mdi-star" class="w-7 h-7" />
             </div>
           </a>
         </div>

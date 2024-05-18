@@ -22,7 +22,7 @@
 
 <a
   href="javascript:history.back()"
-  class="btn btn-sm btn-ghost flex w-fit items-center gap-2 group/backButton"
+  class="flex w-fit items-center gap-2 group/backButton"
 >
   <Icon
     icon="mdi:arrow-left"
@@ -34,7 +34,7 @@
 <div class="mt-5">
   <div class="card bg-base-100 shadow">
     <div class="card-body">
-      <div class="card-title text-5xl text-primary">cryptos:</div>
+      <div class="card-title text-5xl text-primary">token list</div>
 
       <!-- {JSON.stringify(data)} -->
 

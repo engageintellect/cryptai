@@ -22,7 +22,7 @@
 
 <a
   href="javascript:history.back()"
-  class="btn btn-sm btn-ghost flex w-fit items-center gap-2 group/backButton"
+  class="flex w-fit items-center gap-2 group/backButton"
 >
   <Icon
     icon="mdi:arrow-left"
@@ -33,14 +33,14 @@
 
 <div class="mt-5">
   <div class="card bg-base-100 shadow">
-    <div class="card-body">
+    <div class="card-body p-5">
       <div class="card-title text-5xl text-primary">{data.data.id}</div>
     </div>
   </div>
 
   <div class="flex flex-col md:flex-row gap-2 w-full break-all mt-2">
     <div class="card bg-base-100 shadow w-full">
-      <div class="card-body">
+      <div class="card-body p-5">
         <div class="card-title">price:</div>
         <div class="flex flex-col gap-5">
           <div class="card-title text-5xl text-nowrap font-bold">
@@ -73,7 +73,7 @@
 
     <div class="flex md:flex-col gap-2 w-full">
       <div class="card bg-base-100 shadow w-full">
-        <div class="card-body">
+        <div class="card-body p-5">
           <div class="card-title">rank:</div>
           <div class="text-xl md:text-3xl text-primary">{data.data.rank}</div>
           <div class="card-title">24hr vol:</div>
@@ -84,7 +84,7 @@
       </div>
 
       <div class="card bg-base-100 shadow w-full">
-        <div class="card-body">
+        <div class="card-body p-5">
           <div class="card-title">market cap:</div>
           <div class="text-xl md:text-3xl text-primary">
             {largeFloatToText(Number(data.data.marketCapUsd))}
