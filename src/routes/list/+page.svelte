@@ -32,7 +32,7 @@
 </a>
 
 <div class="mt-5">
-  <div class="card bg-base-100 shadow">
+  <div class="card bg-base-200 shadow">
     <div class="card-body">
       <div class="card-title text-5xl text-primary">token list</div>
 
@@ -54,7 +54,11 @@
               <!-- row 1 -->
               <tr>
                 <th class="">{item.rank}</th>
-                <td class="w-fit whitespace-nowrap font-bold">{item.symbol}</td>
+                <td class="w-fit whitespace-nowrap font-bold">
+                  <a href={`/ticker/${item.id}`}>
+                    {item.symbol}
+                  </a>
+                </td>
                 <td>{floatToPrice(Number(item.priceUsd))}</td>
 
                 <td

@@ -1,7 +1,13 @@
-<script lang="ts" context="module">
+<script lang="ts">
   import type { Load } from '@sveltejs/kit'
   import Icon from '@iconify/svelte'
-  import { floatToPrice, largeFloatToText, floatToPercentage } from '$lib/utils'
+  import TitleCard from '$lib/components/ticker/TitleCard.svelte'
+  import InfoCard from '$lib/components/ticker/InfoCard.svelte'
+  import PriceCard from '$lib/components/ticker/PriceCard.svelte'
+  import NewsCard from '$lib/components/ticker/NewsCard.svelte'
+  import SentimentCard from '$lib/components/ticker/SentimentCard.svelte'
+
+  export let data: any
 
   export const load: Load = async ({ params }) => {
     const slug = params.slug
@@ -16,91 +22,54 @@
   }
 </script>
 
-<script lang="ts">
-  export let data: any
-</script>
-
-<a
-  href="javascript:history.back()"
-  class="flex w-fit items-center gap-2 group/backButton"
+<button
+  on:click={() => history.back()}
+  class="flex w-fit items-center gap-2 group/backButton mb-2"
 >
   <Icon
     icon="mdi:arrow-left"
     class="w-5 h-5 md:group-hover/backButton:-translate-x-1 transition-transform duration-200"
   />
   <div>back</div>
-</a>
+</button>
 
-<div class="mt-5">
-  <div class="card bg-base-100 shadow">
-    <div class="card-body p-5">
-      <div class="card-title text-5xl text-primary">{data.data.id}</div>
-    </div>
-  </div>
+<!-- {JSON.stringify(data.crypto)} -->
 
-  <div class="flex flex-col md:flex-row gap-2 w-full break-all mt-2">
-    <div class="card bg-base-100 shadow w-full">
-      <div class="card-body p-5">
-        <div class="card-title">price:</div>
-        <div class="flex flex-col gap-5">
-          <div class="card-title text-5xl text-nowrap font-bold">
-            {floatToPrice(Number(data.data.priceUsd))}
-          </div>
+<div class="">
+  <div class="flex flex-col gap-2">
+    <TitleCard
+      symbol={data.crypto.data.symbol}
+      title={data.crypto.data.id}
+      explorer={data.crypto.data.explorer}
+      rank={data.crypto.data.rank}
+    />
 
-          <div>
-            <div class="card-title">24h change:</div>
+    <div class="flex flex-col md:flex-row gap-2 w-full">
+      <PriceCard
+        price={data.crypto.data.priceUsd}
+        change={data.crypto.data.changePercent24Hr}
+        volume={data.crypto.data.volumeUsd24Hr}
+      />
 
-            {#if data.data.changePercent24Hr > 0}
-              <div class="alert alert-lg alert-success w-fit">
-                {floatToPercentage(Number(data.data.changePercent24Hr))}
-              </div>
-            {:else}
-              <div class="alert alert-error card-title text-xl text-nowrap">
-                {floatToPercentage(Number(data.data.changePercent24Hr))}
-              </div>
-            {/if}
-          </div>
-
-          <div>
-            <div class="card-title">block explorer:</div>
-            <div class="text-sm text-primary truncate">
-              {data.data.explorer}
-            </div>
-          </div>
-        </div>
-      </div>
+      <InfoCard
+        marketCap={data.crypto.data.marketCapUsd}
+        supply={data.crypto.data.supply}
+        maxSupply={data.crypto.data.maxSupply}
+        fng={data.fng.data[0].value}
+        fngClassification={data.fng.data[0].value_classification}
+      />
     </div>
 
-    <div class="flex md:flex-col gap-2 w-full">
-      <div class="card bg-base-100 shadow w-full">
-        <div class="card-body p-5">
-          <div class="card-title">rank:</div>
-          <div class="text-xl md:text-3xl text-primary">{data.data.rank}</div>
-          <div class="card-title">24hr vol:</div>
-          <div class="text-xl md:text-3xl text-primary">
-            {largeFloatToText(Number(data.data.volumeUsd24Hr))}
-          </div>
-        </div>
-      </div>
+    <div class="flex gap-2 w-full">
+      <SentimentCard
+        fng={data.fng.data[0].value}
+        fngClassification={data.fng.data[0].value_classification}
+      />
 
-      <div class="card bg-base-100 shadow w-full">
-        <div class="card-body p-5">
-          <div class="card-title">market cap:</div>
-          <div class="text-xl md:text-3xl text-primary">
-            {largeFloatToText(Number(data.data.marketCapUsd))}
-          </div>
-
-          <div class="card-title">supply:</div>
-          <div class="text-xl md:text-3xl text-primary">
-            {largeFloatToText(Number(data.data.supply))}
-          </div>
-
-          <div class="card-title">max supply:</div>
-          <div class="text-xl md:text-3xl text-primary">
-            {largeFloatToText(Number(data.data.maxSupply))}
-          </div>
-        </div>
-      </div>
+      <NewsCard
+        fng={data.fng.data[0].value}
+        fngClassification={data.fng.data[0].value_classification}
+      />
     </div>
   </div>
 </div>

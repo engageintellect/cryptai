@@ -8,6 +8,20 @@ const config = {
 
 	daisyui: {
 		themes: [
+			{
+        mytheme: {
+          "primary": "#a991f7",
+          "secondary": "#f6d860",
+          "accent": "#37cdbe",
+          "error": "#37cdbe",
+          "info": "#37cdbe",
+          "warning": "#37cdbe",
+          "neutral": "#3d4451",
+          "base-100": "#ffffff",
+          "base-200": "#ffffff",
+          "base-300": "#ffffff",
+        },
+      },
 			'light',
 			'dark',
 			'cupcake',

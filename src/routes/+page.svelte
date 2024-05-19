@@ -22,7 +22,7 @@
 
 <div class="">
   {#if !$currentUser}
-    <div class="hero bg-base-300">
+    <div class="hero bg-base-100">
       <div class="hero-content text-center">
         <div class="max-w-sm">
           <div class="flex items-center gap-2">
@@ -63,7 +63,7 @@
 
     <div
       transition:fade={{ duration: 500 }}
-      class="mockup-browser border border-base-100 shadow-xl mt-5"
+      class="mockup-browser border border-base-300 shadow-xl mt-5"
     >
       <div class="mockup-browser-toolbar">
         <div class="bg-base-300 px-2 py-1 w-full card">
