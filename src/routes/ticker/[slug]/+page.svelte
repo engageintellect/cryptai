@@ -41,10 +41,15 @@
 <div class="">
   <div class="flex flex-col gap-2">
     <TitleCard
-      symbol={data.crypto.data.symbol}
-      title={data.crypto.data.id}
-      explorer={data.crypto.data.explorer}
-      rank={data.crypto.data.rank}
+      symbol={data.crypto.data.symbol || ''}
+      title={data.crypto.data.id || ''}
+      explorer={data.crypto.data.explorer || ''}
+      rank={data.crypto.data.rank || ''}
+      coinHomepage={data.gecko.links.homepage[0] || ''}
+      reposUrl={data.gecko.links.repos_url.github[0] || ''}
+      subreddit={data.gecko.links.subreddit_url || ''}
+      whitepaper={data.gecko.links.whitepaper || ''}
+      coinImage={data.gecko.image.large || ''}
     />
 
     <div class="flex flex-col md:flex-row gap-2 w-full">
@@ -61,6 +66,8 @@
         maxSupply={data.crypto.data.maxSupply}
         fng={data.fng.data[0].value}
         fngClassification={data.fng.data[0].value_classification}
+        genesisDate={data.gecko.genesis_date}
+        hashingAlgorithm={data.gecko.hashing_algorithm}
       />
     </div>
 
@@ -74,3 +81,5 @@
     <NewsCard news={data.news} />
   </div>
 </div>
+
+{JSON.stringify(data.gecko.genesis_date)}
