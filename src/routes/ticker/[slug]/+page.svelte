@@ -6,6 +6,7 @@
   import PriceCard from '$lib/components/ticker/PriceCard.svelte'
   import NewsCard from '$lib/components/ticker/NewsCard.svelte'
   import SentimentCard from '$lib/components/ticker/SentimentCard.svelte'
+  import AiSentimentCard from '$lib/components/ticker/AiSentimentCard.svelte'
 
   export let data: any
 
@@ -22,16 +23,18 @@
   }
 </script>
 
-<button
-  on:click={() => history.back()}
-  class="flex w-fit items-center gap-2 group/backButton mb-2"
->
-  <Icon
-    icon="mdi:arrow-left"
-    class="w-5 h-5 md:group-hover/backButton:-translate-x-1 transition-transform duration-200"
-  />
-  <div>back</div>
-</button>
+<div class="sticky top-0 py-2 bg-base-100 -z-[-1] -mx-2 px-2 border-b mb-2">
+  <button
+    on:click={() => history.back()}
+    class="flex w-fit items-center gap-2 group/backButton"
+  >
+    <Icon
+      icon="mdi:arrow-left"
+      class="w-5 h-5 md:group-hover/backButton:-translate-x-1 transition-transform duration-200"
+    />
+    <div>back</div>
+  </button>
+</div>
 
 <!-- {JSON.stringify(data.crypto)} -->
 
@@ -65,11 +68,8 @@
         fng={data.fng.data[0].value}
         fngClassification={data.fng.data[0].value_classification}
       />
-
-      <NewsCard
-        fng={data.fng.data[0].value}
-        fngClassification={data.fng.data[0].value_classification}
-      />
+      <!-- <AiSentimentCard history={data.history} /> -->
     </div>
+    <NewsCard news={data.news} />
   </div>
 </div>

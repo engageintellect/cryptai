@@ -20,16 +20,18 @@
   export let data: any
 </script>
 
-<a
-  href="javascript:history.back()"
-  class="flex w-fit items-center gap-2 group/backButton"
->
-  <Icon
-    icon="mdi:arrow-left"
-    class="w-5 h-5 md:group-hover/backButton:-translate-x-1 transition-transform duration-200"
-  />
-  <div>back</div>
-</a>
+<div class="sticky top-0 py-2 bg-base-100 -z-[-1] -mx-2 px-2 border-b mb-2">
+  <button
+    on:click={() => history.back()}
+    class="flex w-fit items-center gap-2 group/backButton"
+  >
+    <Icon
+      icon="mdi:arrow-left"
+      class="w-5 h-5 md:group-hover/backButton:-translate-x-1 transition-transform duration-200"
+    />
+    <div>back</div>
+  </button>
+</div>
 
 <div class="mt-5">
   <div class="card bg-base-200 shadow">
