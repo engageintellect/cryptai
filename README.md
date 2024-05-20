@@ -4,6 +4,8 @@
 
 A comprehensive, yet simple cryptocurrency and AI/ML analysis engine built with Sveltekit, Pocketbase, CoinGecko API, OpenAI, Vercel AI SDK, TailwindCSS, and DaisyUI.
 
+**NOTE:** This project is built using the [spatz](https://github.com/engageintellect/spatz) template.
+
 [Demo App](https://engage-cryptai.vercel.app)
 
 ## Features
