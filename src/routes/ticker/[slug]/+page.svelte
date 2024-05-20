@@ -52,6 +52,7 @@
         price={data.crypto.data.priceUsd}
         change={data.crypto.data.changePercent24Hr}
         volume={data.crypto.data.volumeUsd24Hr}
+        vwap={data.crypto.data.vwap24Hr}
       />
 
       <InfoCard

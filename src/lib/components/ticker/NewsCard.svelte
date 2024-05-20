@@ -14,12 +14,15 @@
         {#each news.results as article}
           <a href={article.link} target="_blank" class="flex flex-col gap-2">
             <div class="font-bold">{article.title}</div>
-            <div class="text-sm font-thin line-clamp-4">
-              {article.description}
-            </div>
+
+            {#if article.description != null}
+              <div class="text-sm font-thin line-clamp-4">
+                {article.description}
+              </div>
+            {/if}
             <a
               href={article.link}
-              class="btn btn-sm btn-primary w-fit mt-2 flex items-center gap-2"
+              class="btn btn-sm btn-primary w-fit flex items-center gap-2"
             >
               <div>read more</div>
               <Icon icon="mdi:post" class="w-5 h-5" />

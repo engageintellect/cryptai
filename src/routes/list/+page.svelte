@@ -46,9 +46,12 @@
           <thead>
             <tr>
               <th>Rank</th>
+              <th>Symbol</th>
               <th>Name</th>
               <th>Price</th>
               <th>Change</th>
+              <th>Volume</th>
+              <th>Vwap</th>
             </tr>
           </thead>
           <tbody>
@@ -58,9 +61,13 @@
                 <th class="">{item.rank}</th>
                 <td class="w-fit whitespace-nowrap font-bold">
                   <a href={`/ticker/${item.id}`}>
-                    {item.symbol}
+                    <div class="font-bold">
+                      {item.symbol}
+                    </div>
                   </a>
                 </td>
+
+                <td>{item.name}</td>
                 <td>{floatToPrice(Number(item.priceUsd))}</td>
 
                 <td
@@ -70,6 +77,9 @@
                 >
                   {floatToPercentage(Number(item.changePercent24Hr))}
                 </td>
+
+                <td>{floatToPrice(Number(item.volumeUsd24Hr))}</td>
+                <td>{floatToPrice(Number(item.vwap24Hr))}</td>
               </tr>
             {/each}
           </tbody>

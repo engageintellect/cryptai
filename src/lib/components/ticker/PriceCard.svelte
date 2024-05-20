@@ -2,7 +2,8 @@
   import { floatToPercentage, floatToPrice } from '$lib/utils'
   export let price: any
   export let change: any
-  export let volume
+  export let volume: any
+  export let vwap: any
 </script>
 
 <div class="card bg-base-200 shadow w-full">
@@ -30,6 +31,18 @@
       <div>
         <div class="card-title">volume</div>
         <div class="text-2xl">{floatToPrice(Number(volume))}</div>
+      </div>
+
+      <div>
+        <div class="card-title">vwap</div>
+        <div class="text-2xl">{floatToPrice(Number(vwap))}</div>
+        <div class="text-sm font-thin">
+          {#if vwap > price}
+            price is under vwap
+          {:else}
+            price is above vwap
+          {/if}
+        </div>
       </div>
     </div>
   </div>
