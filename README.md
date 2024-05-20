@@ -2,15 +2,16 @@
 
 ## Description
 
-A complete, fullstack template for Svelte.
+A comprehensive, yet simple cryptocurrency and AI/ML analysis engine built with Sveltekit, Pocketbase, CoinGecko API, OpenAI, Vercel AI SDK, TailwindCSS, and DaisyUI.
 
-[Demo App](https://cryptai.engage-dev.com)
+[Demo App](https://engage-cryptai.vercel.app)
 
 ## Features
 
 - [Sveltekit](https://kit.svelte.dev/): Futuristic web framework for building blazing fast web apps.
 - [Pocketbase](https://pocketbase.io): Self-contained User Auth, Database, Admin UI, and API documentation.
 - [OpenAI](https://openai.com): chatGPT 3.5-turbo & 4.0-turbo for contextually aware chatbots.
+- [CoinGecko](https://coingecko.com): Cryptocurrency data API for market data, coin information, and more.
 - [Vercel AI SDK](https://vercel.com/ai): AI/ML models for image, text, and audio processing.
 - [TailwindCSS](https://tailwindcss.com): A utility-first CSS framework for rapid UI development.
 - [Zod](https://zod.dev): TypeScript-first schema declaration and validation.
