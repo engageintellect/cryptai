@@ -3,6 +3,7 @@
   import { currentUser } from '$lib/stores/user'
   import Icon from '@iconify/svelte'
   import { fade, slide } from 'svelte/transition'
+  import SentimentCard from '$lib/components/ticker/SentimentCard.svelte'
   let query: string = ''
 
   import { goto } from '$app/navigation'
@@ -18,6 +19,8 @@
     event.preventDefault()
     handleSearch()
   }
+
+  export let data
 </script>
 
 <div class="">
@@ -126,7 +129,7 @@
           </div>
         </div>
 
-        <div class="w-full flex gap-2 w-full max-w-md mx-auto">
+        <div class="w-full flex gap-2 max-w-md mx-auto">
           <a href={`/list`} class="btn btn-primary my-2 flex-1">
             <div class="flex items-center gap-2">
               all cryptos
@@ -147,17 +150,15 @@
           </a>
         </div>
 
-        <div class="card-title mt-20">market data</div>
+        <div class="w-full max-w-md mx-auto">
+          <div class="card-title mt-10">market data</div>
 
-        <p>
-          Irure ullamco sunt id aute laborum non voluptate magna nostrud commodo
-          esse cillum non. Ullamco quis aliqua commodo eiusmod do exercitation
-          dolor. Ad id sunt qui consequat. Tempor labore id exercitation dolor
-          sint eiusmod laboris esse nulla ad. Adipisicing aute ut eu voluptate
-          esse. Quis exercitation laborum consequat exercitation ea cupidatat
-          mollit qui qui ea aliqua veniam pariatur occaecat. Nisi cillum aliquip
-          excepteur pariatur cillum dolor excepteur ullamco sunt.
-        </p>
+          <p class="text-base-content/70">
+            Cryptai is a cryptocurrency insights platform powered by AI. We
+            provide real-time market data, news, and sentiment analysis for
+            cryptocurrencies.
+          </p>
+        </div>
       </div>
     </div>
   {/if}

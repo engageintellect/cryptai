@@ -56,7 +56,7 @@
             </div>
             <ul
               tabindex="-1"
-              class="dropdown-content dropdown-end rounded-box border-primary bg-base-100 z-50 mt-3 h-96 w-52 overflow-auto border p-2 shadow"
+              class="dropdown-content dropdown-end rounded-box bg-base-100 z-50 mt-3 h-96 w-52 overflow-auto p-2 shadow-xl"
             >
               <li
                 class="sticky top-0 theme-controller text-primary-content btn btn-primary btn-sm btn-block justify-start font-medium mb-2"
@@ -114,7 +114,7 @@
 
             <ul
               tabindex="-1"
-              class="dropdown-content fomt-semibold menu p-2 shadow bg-base-100 rounded-box w-52 border border-primary mt-3 z-50"
+              class="dropdown-content fomt-semibold menu p-2 shadow-xl bg-base-100 rounded-box w-52 mt-3 z-50"
             >
               <li class="mb-5">
                 <div

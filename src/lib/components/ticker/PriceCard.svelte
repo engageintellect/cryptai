@@ -1,16 +1,18 @@
 <script lang="ts">
+  import Icon from '@iconify/svelte'
   import { floatToPercentage, floatToPrice } from '$lib/utils'
   export let price: any
   export let change: any
   export let volume: any
-  export let vwap: any
+  export let high_24h: any
+  export let low_24h: any
 </script>
 
-<div class="card bg-base-200 shadow w-full">
+<div class="card bg-base-100 shadow-xl w-full">
   <div class="card-body p-5">
     <div class="card-title">current price</div>
     <div class="flex flex-col gap-5">
-      <div class="card-title text-5xl text-nowrap font-bold">
+      <div class="card-title text-4xl text-nowrap font-bold">
         {floatToPrice(Number(price))}
       </div>
 
@@ -18,30 +20,35 @@
         <div class="card-title">24h change</div>
 
         {#if change > 0}
-          <div class="alert py-2 px-4 alert-success w-fit">
+          <div class="badge badge-success py-4 text-lg">
             {floatToPercentage(Number(change))}
           </div>
         {:else}
-          <div class="alert py-2 px-4 alert-error w-fit">
+          <div class="badge badge-error py-4 text-lg">
             {floatToPercentage(Number(change))}
           </div>
         {/if}
       </div>
 
-      <div>
-        <div class="card-title">volume</div>
-        <div class="text-2xl">{floatToPrice(Number(volume))}</div>
-      </div>
+      <div class="w-full flex items-center gap-2 md:gap-5">
+        <div class="w-full">
+          <div class="card-title flex items-center gap-2">
+            <div>24h high</div>
+            <Icon icon="mdi:arrow-up" class="w-5 h-5" />
+          </div>
+          <div class="badge badge-success py-4 text-lg">
+            {floatToPrice(Number(high_24h))}
+          </div>
+        </div>
 
-      <div>
-        <div class="card-title">vwap</div>
-        <div class="text-2xl">{floatToPrice(Number(vwap))}</div>
-        <div class="text-sm font-thin">
-          {#if vwap > price}
-            price is under vwap
-          {:else}
-            price is above vwap
-          {/if}
+        <div class="w-full">
+          <div class="card-title flex items-center gap-2">
+            <div>24h low</div>
+            <Icon icon="mdi:arrow-down" class="w-5 h-5" />
+          </div>
+          <div class="badge badge-error py-4 text-lg">
+            {floatToPrice(Number(low_24h))}
+          </div>
         </div>
       </div>
     </div>

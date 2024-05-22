@@ -3,7 +3,7 @@
   import Icon from '@iconify/svelte'
 </script>
 
-<div class="card bg-base-200 overflow-auto shadow w-full">
+<div class="card bg-base-100 overflow-auto shadow-xl w-full">
   <div class="card-body p-5">
     <div class="card-title">news</div>
 
@@ -22,6 +22,7 @@
             {/if}
             <a
               href={article.link}
+              target="_blank"
               class="btn btn-sm btn-primary w-fit flex items-center gap-2"
             >
               <div>read more</div>

@@ -12,8 +12,8 @@
   import Icon from '@iconify/svelte'
 </script>
 
-<div class="card bg-base-200 shadow">
-  <div class="card-body p-2 md:p-5">
+<div class="card bg-base-100 shadow-xl">
+  <div class="card-body p-5">
     <div class="flex justify-between items-start">
       <div>
         <div class="flex items-start gap-2">
@@ -25,21 +25,19 @@
             </div>
           {/if}
           <div class="flex flex-col items-start w-full">
-            <div class="card-title text-5xl">{symbol}</div>
-            <div class="text-xl">{title}</div>
+            <div class="card-title text-5xl uppercase">{symbol}</div>
+            <div class="text-xl text-base-content/50">{title}</div>
           </div>
         </div>
       </div>
       <div>
-        <div class="card bg-primary shadow">
-          <div
-            class="card-body p-2 text-primary-content flex justify-center items-center"
-          >
-            <div class="card-title text-xl">
+        <a href="/list" class="">
+          <div class="">
+            <div class="card-title text-lg">
               <div class="flex items-center gap-2">
                 <Icon
                   icon="icon-park-solid:ranking-list"
-                  class="text-primary-content"
+                  class="text-primary w-7 h-7"
                 />
 
                 <div>
@@ -48,42 +46,41 @@
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
 
-    <div>
-      <div>resources</div>
+    <div class="mt-5">
+      <div class="text-base-content/50">resources</div>
 
-      <div class="flex gap-1 overflow-auto">
-        {#if explorer !== ''}
-          <a href={explorer} class="badge badge-primary py-3 whitespace-nowrap"
+      <div class="flex gap-1 overflow-auto items-center">
+        {#if explorer}
+          <a href={explorer} class="btn btn-sm btn-primary whitespace-nowrap"
             >block explorer</a
           >
         {/if}
 
-        {#if coinHomepage !== ''}
+        {#if coinHomepage}
           <a
             href={coinHomepage}
-            class="badge badge-primary py-3 whitespace-nowrap">homepage</a
+            class="btn btn-sm btn-primary whitespace-nowrap">homepage</a
           >
         {/if}
 
         {#if whitepaper !== ''}
-          <a
-            href={whitepaper}
-            class="badge badge-primary py-3 whitespace-nowrap">whitepaper</a
+          <a href={whitepaper} class="btn btn-sm btn-primary whitespace-nowrap"
+            >whitepaper</a
           >
         {/if}
 
         {#if reposUrl !== ''}
-          <a href={reposUrl} class="badge badge-primary py-3 whitespace-nowrap"
+          <a href={reposUrl} class="btn btn-sm btn-primary whitespace-nowrap"
             >repository</a
           >
         {/if}
 
         {#if subreddit !== ''}
-          <a href={subreddit} class="badge badge-primary py-3 whitespace-nowrap"
+          <a href={subreddit} class="btn btn-sm btn-primary whitespace-nowrap"
             >subreddit</a
           >
         {/if}

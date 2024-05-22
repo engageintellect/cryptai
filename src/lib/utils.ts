@@ -28,7 +28,6 @@ export const validateData = async (formData:any, schema:any) => {
 };
 
 export function floatToPrice(amount: number): string {
-	console.log('this is the amount', amount)
 	if (Number(amount) < Number(0.01)) {
 		return `$${amount.toFixed(6).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
 	} else {
