@@ -4,6 +4,7 @@
   import Icon from '@iconify/svelte'
   import { fade, slide } from 'svelte/transition'
   import SentimentCard from '$lib/components/ticker/SentimentCard.svelte'
+  import Timeline from '$lib/components/Timeline.svelte'
   let query: string = ''
 
   import { goto } from '$app/navigation'
@@ -158,6 +159,10 @@
             provide real-time market data, news, and sentiment analysis for
             cryptocurrencies.
           </p>
+        </div>
+
+        <div class="my-10 flex justify-center">
+          <Timeline />
         </div>
       </div>
     </div>

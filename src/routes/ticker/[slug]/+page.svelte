@@ -25,21 +25,23 @@
 </script>
 
 <div class="sticky top-0 py-2 bg-base-100 -z-[-1] -mx-2 px-2 shadow-xl mb-2">
-  <button
-    on:click={() => history.back()}
-    class="flex w-fit items-center gap-2 group/backButton"
-  >
-    <Icon
-      icon="mdi:arrow-left"
-      class="w-5 h-5 md:group-hover/backButton:-translate-x-1 transition-transform duration-200"
-    />
-    <div>back</div>
-  </button>
+  <div class="max-w-2xl w-full mx-auto">
+    <button
+      on:click={() => history.back()}
+      class="flex w-fit items-center gap-2 group/backButton md:ml-2"
+    >
+      <Icon
+        icon="mdi:arrow-left"
+        class="w-5 h-5 md:group-hover/backButton:-translate-x-1 transition-transform duration-200"
+      />
+      <div>back</div>
+    </button>
+  </div>
 </div>
 
 <!-- {JSON.stringify(data.crypto)} -->
 
-<div class="">
+<div class="w-full max-w-2xl mx-auto">
   <div class="flex flex-col gap-2">
     <TitleCard
       symbol={data?.gecko?.symbol || ''}
