@@ -8,8 +8,8 @@
   method="POST"
   class="card max-w-sm sm:mt-10 mx-auto"
 >
-  <div class="mb-5">
-    <h1 class="text-7xl">reset password</h1>
+  <div class="my-5">
+    <h1 class="card-title text-5xl text-primary">reset password</h1>
 
     <p class="pt-2">Request a password reset link to be e-mailed to you.</p>
   </div>

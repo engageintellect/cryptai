@@ -2,8 +2,7 @@
   import { PUBLIC_DOCS_URL } from '$env/static/public'
   import { currentUser } from '$lib/stores/user'
   import Icon from '@iconify/svelte'
-  import { fade, slide } from 'svelte/transition'
-  import SentimentCard from '$lib/components/ticker/SentimentCard.svelte'
+  import { fade } from 'svelte/transition'
   import Timeline from '$lib/components/Timeline.svelte'
   let query: string = ''
 
@@ -26,12 +25,12 @@
 
 <div class="">
   {#if !$currentUser}
-    <div class="hero bg-base-100">
+    <div class="hero bg-base-100 mt-5">
       <div class="hero-content text-center">
         <div class="max-w-sm">
           <div class="flex items-center gap-2">
             <Icon
-              icon="icon-park-solid:stock-market"
+              icon="carbon:machine-learning-model"
               class="w-20 h-20 text-primary"
             />
             <div class="text-7xl font-extrabold text-primary drop-shadow-lg">
@@ -67,7 +66,7 @@
 
     <div
       transition:fade={{ duration: 500 }}
-      class="mockup-browser border border-base-300 shadow-xl mt-5"
+      class="mockup-browser border border-base-300 shadow-xl mt-5 max-w-2xl mx-auto"
     >
       <div class="mockup-browser-toolbar">
         <div class="bg-base-300 px-2 py-1 w-full card">
@@ -94,14 +93,16 @@
   {:else}
     <div class="flex flex-col gap-10 mt-10">
       <div>
-        <h1 class="text-7xl">
-          <div
-            class="tracking-tight text-primary font-extrabold flex items-center justify-center"
-          >
-            <div>crypt</div>
-            <div class="font-thin text-primary/[33%] tracking-tighter">ai</div>
+        <div class="flex items-center justify-center gap-2">
+          <Icon
+            icon="carbon:machine-learning-model"
+            class="w-20 h-20 text-primary"
+          />
+          <div class="text-7xl font-extrabold text-primary drop-shadow-lg">
+            crypt<span class="text-primary/[33%]">ai</span>
           </div>
-        </h1>
+        </div>
+
         <p class="mt-2 flex justify-center gap-1">
           visit <a class="text-primary underline" href={PUBLIC_DOCS_URL}>docs</a
           > for more info
@@ -114,9 +115,9 @@
             <form class="w-full flex" on:submit={handleSubmit}>
               <input
                 type="text"
-                class="w-full placeholder-base-content/50 text-primary"
+                class="w-full placeholder-base-content/50"
                 bind:value={searchQuery}
-                placeholder="Enter cryptocurrency symbol..."
+                placeholder="search crypto name (e.g., 'bitcoin')"
                 autofocus
               />
 
@@ -128,9 +129,24 @@
               </button>
             </form>
           </div>
+
+          <div class="flex items-center gap-2 my-2">
+            <a
+              href="/ticker/bitcoin"
+              class="btn btn-sm flex-1 text-sm font-thin">bitcoin</a
+            >
+            <a
+              href="/ticker/ethereum"
+              class="btn btn-sm flex-1 text-sm font-thin">ethereum</a
+            >
+            <a
+              href="/ticker/dogecoin"
+              class="btn btn-sm flex-1 text-sm font-thin">dogecoin</a
+            >
+          </div>
         </div>
 
-        <div class="w-full flex gap-2 max-w-md mx-auto">
+        <div class="w-full flex gap-2 max-w-md mx-auto mt-5">
           <a href={`/list`} class="btn btn-primary my-2 flex-1">
             <div class="flex items-center gap-2">
               all cryptos
@@ -154,8 +170,8 @@
           </a>
         </div>
 
-        <div class="w-full max-w-md mx-auto">
-          <div class="card-title mt-10 text-primary">what is this?</div>
+        <div class="w-full max-w-md mx-auto my-10">
+          <div class="card-title text-primary">what is this?</div>
 
           <p class="text-base-content/70">
             Cryptai is a cryptocurrency insights platform powered by AI. We

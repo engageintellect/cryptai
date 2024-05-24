@@ -22,8 +22,8 @@
     }
   }}
 >
-  <div class="mb-5">
-    <h1 class="text-7xl">register</h1>
+  <div class="my-5">
+    <h1 class="card-title text-5xl text-primary">register</h1>
     <p class=" pt-2">
       Or <a href="/auth/login" class="underline text-primary">login</a> if you have
       an account.
@@ -58,7 +58,7 @@
 
     <div class="alert border border-primary mb-2 text-sm flex">
       <Icon icon="material-symbols:encrypted" class="w-10 h-10 text-primary" />
-      <div>
+      <div class="text-left">
         Your password will be encrypted for your safety, it will not be readable
         by anyone.
       </div>

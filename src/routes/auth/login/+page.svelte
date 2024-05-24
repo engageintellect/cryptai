@@ -23,8 +23,8 @@
     }
   }}
 >
-  <div class="mb-5">
-    <h1 class="text-7xl">login</h1>
+  <div class="my-5">
+    <h1 class="card-title text-5xl text-primary">login</h1>
     <p class="pt-2">
       Or <a href="/auth/register" class="underline text-primary">register</a> to
       create an account.

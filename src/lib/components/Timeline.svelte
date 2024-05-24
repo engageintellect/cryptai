@@ -11,14 +11,14 @@
     <div>built in public</div>
     <Icon icon="mdi:github" class="w-7 h-7" />
   </a>
-
+  <!-- 
   <ul class="timeline timeline-vertical lg:timeline-horizontal my-2">
     <li>
       <div class="timeline-start">6/2024</div>
       <div class="timeline-middle">
         <Icon icon="mdi:check-circle" class="w-5 h-5" />
       </div>
-      <div class="timeline-end timeline-box">Alpha</div>
+      <div class="timeline-end timeline-box">Alpha Release</div>
       <hr />
     </li>
     <li>
@@ -27,7 +27,7 @@
       <div class="timeline-middle">
         <Icon icon="mdi:check-circle" class="w-5 h-5" />
       </div>
-      <div class="timeline-end timeline-box">Beta</div>
+      <div class="timeline-end timeline-box">Beta Release</div>
       <hr />
     </li>
     <li>
@@ -39,5 +39,5 @@
       <div class="timeline-end timeline-box">Release</div>
       <hr />
     </li>
-  </ul>
+  </ul> -->
 </div>
