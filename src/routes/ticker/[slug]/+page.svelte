@@ -6,10 +6,7 @@
   import PriceCard from '$lib/components/ticker/PriceCard.svelte'
   import NewsCard from '$lib/components/ticker/NewsCard.svelte'
   import SentimentCard from '$lib/components/ticker/SentimentCard.svelte'
-  import AiSentimentCard from '$lib/components/ticker/AiSentimentCard.svelte'
   import DeveloperData from '$lib/components/ticker/DeveloperData.svelte'
-  import Description from '$lib/components/ticker/Description.svelte'
-
   export let data: any
 
   export const load: Load = async ({ params }) => {
@@ -70,6 +67,7 @@
         />
 
         <InfoCard
+          tickerName={data?.gecko?.name}
           marketCap={data?.gecko?.market_data?.market_cap?.usd}
           supply={data?.gecko?.market_data?.circulating_supply}
           maxSupply={data?.gecko?.market_data?.max_supply}

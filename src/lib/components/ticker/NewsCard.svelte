@@ -24,14 +24,14 @@
                 {article.description}
               </div>
             {/if}
-            <a
+            <!-- <a
               href={article.link}
               target="_blank"
-              class="btn btn-sm btn-primary w-fit flex items-center gap-2"
+              class="btn btn-sm btn-primary w-fit flex items-center gap-2 mt-2"
             >
               <div>read more</div>
               <Icon icon="mdi:post" class="w-5 h-5" />
-            </a>
+            </a> -->
           </a>
         {/each}
       {:else}

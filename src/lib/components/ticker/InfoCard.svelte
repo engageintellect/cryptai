@@ -5,6 +5,7 @@
   export let genesisDate: any
   export let hashingAlgorithm: any
   export let volume: any
+  export let tickerName: any
 
   import { largeFloatToText } from '$lib/utils'
 </script>
@@ -12,7 +13,7 @@
 <div class="card bg-base-100 shadow-xl w-full">
   <div class="card-body p-2 md:p-5">
     <div class="">
-      <div class="card-title">ticker info</div>
+      <div class="card-title lowercase">{tickerName} info</div>
       <table class="table mt-2">
         <tbody class="p-0">
           <tr class="p-0">

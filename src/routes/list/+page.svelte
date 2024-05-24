@@ -1,6 +1,7 @@
 <script lang="ts">
   import Icon from '@iconify/svelte'
   import { floatToPrice, largeFloatToText, floatToPercentage } from '$lib/utils'
+  import { strictObject } from 'zod'
   export let data: any
 </script>
 
@@ -71,7 +72,7 @@
 
                   <td class="">
                     <div
-                      class={item.changePercent24Hr > 0
+                      class={Number(item.price_change_percentage_24h > 0)
                         ? 'badge badge-success'
                         : 'badge badge-error'}
                     >

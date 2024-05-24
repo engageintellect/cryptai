@@ -40,7 +40,10 @@
   <div class="text-neutral-content">
     <div class="navbar max-w-2xl mx-auto text-base-content">
       <div class="flex-1">
-        <a href="/" class="btn btn-primary text-xl">cryptai</a>
+        <a href="/" class="flex items-center gap-2 btn btn-primary text-xl">
+          <Icon icon="carbon:machine-learning-model" class="w-7 h-7" />
+          <div>cryptai</div>
+        </a>
       </div>
       <div class="flex-none gap-2">
         {#if $currentUser}
