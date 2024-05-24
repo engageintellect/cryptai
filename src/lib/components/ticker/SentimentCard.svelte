@@ -13,7 +13,7 @@
       >
         {fng}/100
       </a>
-      <div>
+      <div class="min-w-[33%]">
         <div class="card-title text-3xl md:text-4xl lowercase">
           {fngClassification}
         </div>
@@ -22,7 +22,11 @@
           value={fng}
           max="100"
         ></progress>
-        <div class="font-thin">{fng}/100</div>
+
+        <div class="flex items-center justify-between">
+          <div class="font-thin">{fng}/100</div>
+          <div class="font-thin">{fng}%</div>
+        </div>
       </div>
 
       <!-- <div

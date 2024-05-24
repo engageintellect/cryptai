@@ -33,14 +33,19 @@
             <td class="p-0 py-2 w-1/3">{largeFloatToText(Number(maxSupply))}</td
             >
           </tr>
-          <tr>
-            <td class="font-bold p-0 py-2">genesis date</td>
-            <td class="p-0 py-2 w-1/3">{genesisDate}</td>
-          </tr>
-          <tr>
-            <td class="font-bold p-0 py-2">hashing algo</td>
-            <td class="p-0 py-2 w-1/3">{hashingAlgorithm}</td>
-          </tr>
+
+          {#if genesisDate !== null}
+            <tr>
+              <td class="font-bold p-0 py-2">genesis date</td>
+              <td class="p-0 py-2 w-1/3">{genesisDate}</td>
+            </tr>
+          {/if}
+          {#if hashingAlgorithm !== null}
+            <tr>
+              <td class="font-bold p-0 py-2">hashing algo</td>
+              <td class="p-0 py-2 w-1/3">{hashingAlgorithm}</td>
+            </tr>
+          {/if}
         </tbody>
       </table>
     </div>

@@ -114,7 +114,7 @@
             <form class="w-full flex" on:submit={handleSubmit}>
               <input
                 type="text"
-                class="w-full"
+                class="w-full placeholder-base-content/50 text-primary"
                 bind:value={searchQuery}
                 placeholder="Enter cryptocurrency symbol..."
                 autofocus
@@ -152,7 +152,7 @@
         </div>
 
         <div class="w-full max-w-md mx-auto">
-          <div class="card-title mt-10">market data</div>
+          <div class="card-title mt-10 text-primary">what is this?</div>
 
           <p class="text-base-content/70">
             Cryptai is a cryptocurrency insights platform powered by AI. We

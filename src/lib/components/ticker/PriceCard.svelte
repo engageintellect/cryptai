@@ -12,12 +12,12 @@
   <div class="card-body p-5">
     <div class="card-title">current price</div>
     <div class="flex flex-col gap-5">
-      <div class="card-title text-4xl text-nowrap font-bold">
+      <div class="card-title text-4xl text-nowrap font-thin text-primary">
         {floatToPrice(Number(price))}
       </div>
 
       <div>
-        <div class="card-title">24h change</div>
+        <div class=" pb-2">daily change</div>
 
         {#if change > 0}
           <div class="badge badge-success py-4 text-lg">
@@ -32,8 +32,8 @@
 
       <div class="w-full flex items-center gap-2 md:gap-5">
         <div class="w-full">
-          <div class="card-title flex items-center gap-2">
-            <div>24h high</div>
+          <div class=" flex items-center gap-2 pb-2">
+            <div class="">daily high</div>
             <Icon icon="mdi:arrow-up" class="w-5 h-5" />
           </div>
           <div class="badge badge-success py-4 text-lg">
@@ -42,8 +42,8 @@
         </div>
 
         <div class="w-full">
-          <div class="card-title flex items-center gap-2">
-            <div>24h low</div>
+          <div class=" flex items-center gap-2 pb-2">
+            <div class="">daily low</div>
             <Icon icon="mdi:arrow-down" class="w-5 h-5" />
           </div>
           <div class="badge badge-error py-4 text-lg">
