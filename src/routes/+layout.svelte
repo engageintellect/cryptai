@@ -187,7 +187,7 @@
               <form
                 class="w-full flex mt-5"
                 method="POST"
-                action="/logout"
+                action="/auth/logout"
                 use:enhance={() => {
                   return async ({ result }) => {
                     pb.authStore.clear()

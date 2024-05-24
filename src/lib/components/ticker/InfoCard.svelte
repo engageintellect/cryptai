@@ -10,7 +10,7 @@
 </script>
 
 <div class="card bg-base-100 shadow-xl w-full">
-  <div class="card-body p-5">
+  <div class="card-body p-2 md:p-5">
     <div class="">
       <div class="card-title">ticker info</div>
       <table class="table mt-2">

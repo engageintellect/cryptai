@@ -4,7 +4,7 @@
 </script>
 
 <div class="card bg-base-100 shadow-xl w-full">
-  <div class="card-body p-5">
+  <div class="card-body p-2 md:p-5">
     <div class="flex items-center justify-between gap-5 md:gap-10">
       <a
         href="https://alternative.me/crypto/fear-and-greed-index/"

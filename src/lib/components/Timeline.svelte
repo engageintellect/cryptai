@@ -6,7 +6,7 @@
 <div class="flex flex-col items-center">
   <a
     href={PUBLIC_REPOSITORY_URL}
-    class="btn btn-primary flex items-center gap-2"
+    class="btn btn-wide btn-primary flex items-center gap-2"
   >
     <div>built in public</div>
     <Icon icon="mdi:github" class="w-7 h-7" />

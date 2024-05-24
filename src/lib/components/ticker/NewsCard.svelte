@@ -4,15 +4,19 @@
 </script>
 
 <div class="card bg-base-100 overflow-auto shadow-xl w-full">
-  <div class="card-body p-5">
+  <div class="card-body p-2 md:p-5">
     <div class="card-title">news</div>
 
     <!-- {JSON.stringify(news.results)} -->
 
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-5">
       {#if news.totalResults > 0}
         {#each news.results as article}
-          <a href={article.link} target="_blank" class="flex flex-col gap-2">
+          <a
+            href={article.link}
+            target="_blank"
+            class="flex flex-col gap-2 border-b border-base-300 pb-5"
+          >
             <div class="font-bold">{article.title}</div>
 
             {#if article.description != null}

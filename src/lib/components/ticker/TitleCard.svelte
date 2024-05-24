@@ -13,7 +13,7 @@
 </script>
 
 <div class="card bg-base-100 shadow-xl">
-  <div class="card-body p-5">
+  <div class="card-body p-2 md:p-5">
     <div class="flex justify-between items-start">
       <div>
         <div class="flex items-start gap-2">

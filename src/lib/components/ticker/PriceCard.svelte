@@ -9,7 +9,7 @@
 </script>
 
 <div class="card bg-base-100 shadow-xl w-full">
-  <div class="card-body p-5">
+  <div class="card-body p-2 md:p-5">
     <div class="card-title">current price</div>
     <div class="flex flex-col gap-5">
       <div class="card-title text-5xl text-nowrap">
