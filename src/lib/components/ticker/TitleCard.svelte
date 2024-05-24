@@ -31,7 +31,11 @@
         </div>
       </div>
       <div>
-        <a href="/list" class="">
+        <a
+          href="/list"
+          class="md:tooltip md:tooltip-left"
+          data-tip="token rank"
+        >
           <div class="">
             <div class="card-title text-lg">
               <div class="flex items-center gap-2">
@@ -51,7 +55,7 @@
     </div>
 
     <div class="mt-5">
-      <div class="text-base-content/50">resources</div>
+      <div class="pb-2">resources</div>
 
       <div class="flex gap-1 overflow-auto items-center">
         {#if explorer}

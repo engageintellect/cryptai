@@ -46,7 +46,7 @@
         {#if $currentUser}
           <div class="dropdown dropdown-end">
             <div tabindex="0" role="button">
-              <div class="lg:tooltip lg:tooltip-left" data-tip="Theme Selector">
+              <div class="lg:tooltip lg:tooltip-left" data-tip="theme selector">
                 <button class="btn btn-ghost">
                   <div class="font-normal lowercase">
                     <Icon icon="gridicons-themes" class="h-6 w-6" />
@@ -124,6 +124,16 @@
                     >{$currentUser?.username}</a
                   >
                 </div>
+              </li>
+
+              <li>
+                <a href="/list">
+                  <div class="flex gap-2 items-center font-bold">
+                    <Icon icon="cryptocurrency:btc" class="w-5 h-5" />
+                    <div>All Tokens</div>
+                    <!-- <div class="badge badge-accent">new</div> -->
+                  </div>
+                </a>
               </li>
 
               <li>

@@ -16,7 +16,7 @@
             <div class="font-bold">{article.title}</div>
 
             {#if article.description != null}
-              <div class="text-sm font-thin line-clamp-4">
+              <div class="text-sm font-thin line-clamp-4 text-base-content/70">
                 {article.description}
               </div>
             {/if}

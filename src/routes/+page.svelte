@@ -135,7 +135,10 @@
             <div class="flex items-center gap-2">
               all cryptos
 
-              <Icon icon="mdi-grid" class="w-7 h-7" />
+              <Icon
+                icon="material-symbols:data-table-outline"
+                class="w-7 h-7"
+              />
             </div>
           </a>
 

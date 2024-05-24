@@ -12,7 +12,7 @@
   <div class="card-body p-5">
     <div class="card-title">current price</div>
     <div class="flex flex-col gap-5">
-      <div class="card-title text-4xl text-nowrap font-thin text-primary">
+      <div class="card-title text-5xl text-nowrap">
         {floatToPrice(Number(price))}
       </div>
 

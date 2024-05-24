@@ -8,6 +8,7 @@
   import SentimentCard from '$lib/components/ticker/SentimentCard.svelte'
   import AiSentimentCard from '$lib/components/ticker/AiSentimentCard.svelte'
   import DeveloperData from '$lib/components/ticker/DeveloperData.svelte'
+  import Description from '$lib/components/ticker/Description.svelte'
 
   export let data: any
 
@@ -77,6 +78,8 @@
           volume={data?.gecko?.market_data?.total_volume?.usd}
         />
       </div>
+
+      <!-- <Description description={data.gecko.description.en} /> -->
 
       <div class="flex flex-col md:flex-row gap-2 w-full">
         <DeveloperData stuff={data?.gecko?.developer_data} />
